@@ -24,13 +24,8 @@ Still under development with ongoing progreess.
 2. Open the project folder
 3. Open `index.html` in a web browser
 
-## 📚 What I Learned
-- Structuring a multi-page website
-- Using utility-first CSS frameworks
-- Creating responsive layouts
-- Improving website accessibility and design
-
 ## 🔮 Future Improvements
 - Add animations and transitions
 - Improve SEO optimization
 - Add a contact form
+
