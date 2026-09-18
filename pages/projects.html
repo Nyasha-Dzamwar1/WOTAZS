@@ -6,10 +6,7 @@
   <title>WOTAZS • Projects</title>
 
   <!-- Tailwind -->
-  <link href="/dist/output.css" rel="stylesheet">
-
-  <!-- Swiper.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="/dist/output.css" rel="stylesheet" />
 </head>
 
 <body class="bg-gray-50">
@@ -17,24 +14,53 @@
   <!-- Navbar -->
   <div id="navbar-container"></div>
 
+  <main>
 
-  <!-- HERO SECTION WITH SLIDER -->
-  <section class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="assets/images/hero/hero1.jpg" class="w-full h-screen object-cover"></div>
-      <div class="swiper-slide"><img src="assets/images/hero/hero2.jpg" class="w-full h-screen object-cover"></div>
-    </div>
-    <div class="swiper-pagination"></div>
-  </section>
+    <!-- HERO BANNER -->
+    <section class="relative min-h-[400px] md:h-[380px] flex items-center overflow-hidden">
+      <!-- Background -->
+      <img
+        src="/assets/images/hero/hero.jpg"
+        alt="Construction site"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black/60"></div>
 
+      <!-- Content -->
+      <div class="relative z-10 container mx-auto px-6 md:px-8 py-16">
+        <p class="text-white/85 text-sm md:text-base tracking-widest mb-3">BUILDING EXCELLENCE WITH INTEGRITY</p>
+        <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-8">OUR PROJECTS</h1>
+        <ul class="text-white text-sm md:text-base space-y-2">
+          <li class="flex items-center gap-3"><span class="block w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span>Building Construction</li>
+          <li class="flex items-center gap-3"><span class="block w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span>Renovation &amp; Remodeling</li>
+          <li class="flex items-center gap-3"><span class="block w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span>Electrical Works</li>
+          <li class="flex items-center gap-3"><span class="block w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span>CCTV Installation</li>
+          <li class="flex items-center gap-3"><span class="block w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span>Plumbing</li>
+          <li class="flex items-center gap-3"><span class="block w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span>Quantity Surveying</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROJECTS GALLERY -->
+    <section class="container mx-auto px-6 md:px-8 py-16 md:py-24">
+      <div class="mb-12 md:mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-darkBlue tracking-tight">OUR PROJECTS</h2>
+        <div class="w-24 h-1.5 bg-darkGreen rounded-full mt-4"></div>
+      </div>
+
+      <!-- Cards rendered by assets/js/projects.js -->
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10"></div>
+    </section>
+
+  </main>
 
   <!-- Footer -->
-  <footer id="footer"></footer>
+  <div id="footer-container"></div>
 
   <!-- JS -->
   <script src="/assets/js/main.js"></script>
   <script src="/assets/js/navbar.js"></script>
-  <script src="/assets/js/swiper-init.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="/assets/js/footer.js"></script>
+  <script src="/assets/js/projects.js"></script>
 </body>
 </html>

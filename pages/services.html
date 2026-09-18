@@ -3,13 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WOTAZS • Our Services</title>
+  <title>WOTAZS • Services</title>
 
   <!-- Tailwind -->
-  <link href="../dist/output.css" rel="stylesheet">
-
-  <!-- Swiper.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="/dist/output.css" rel="stylesheet" />
 </head>
 
 <body class="bg-gray-50">
@@ -17,24 +14,313 @@
   <!-- Navbar -->
   <div id="navbar-container"></div>
 
+  <main>
 
-  <!-- HERO SECTION WITH SLIDER -->
-  <section class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="assets/images/hero/hero1.jpg" class="w-full h-screen object-cover"></div>
-      <div class="swiper-slide"><img src="assets/images/hero/hero2.jpg" class="w-full h-screen object-cover"></div>
-    </div>
-    <div class="swiper-pagination"></div>
-  </section>
+    <!-- HERO BANNER -->
+    <section class="relative min-h-[400px] md:h-[380px] flex items-center overflow-hidden">
+      <!-- Background -->
+      <img
+        src="/assets/images/hero/hero.jpg"
+        alt="Construction site"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black/60"></div>
 
+      <!-- Content -->
+      <div class="relative z-10 container mx-auto px-6 md:px-8 py-16">
+        <p class="text-white/85 text-sm md:text-base tracking-widest mb-3">BUILDING EXCELLENCE WITH INTEGRITY</p>
+        <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-8">OUR SERVICES</h1>
+        <ul class="text-white text-sm md:text-base space-y-2">
+          <li class="flex items-center gap-3"><span class="block w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span>Building Construction</li>
+          <li class="flex items-center gap-3"><span class="block w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span>Renovations &amp; Remodeling</li>
+          <li class="flex items-center gap-3"><span class="block w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span>Civil Works</li>
+          <li class="flex items-center gap-3"><span class="block w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span>Electrical &amp; Plumbing</li>
+          <li class="flex items-center gap-3"><span class="block w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span>Project Management</li>
+          <li class="flex items-center gap-3"><span class="block w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span>Quantity Surveying</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SERVICES ACCORDION -->
+    <section class="bg-gray-100 py-16 md:py-24">
+      <div class="max-w-6xl mx-auto px-6 md:px-8">
+        <div class="mb-12 md:mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-darkBlue tracking-tight">WHAT WE DO</h2>
+          <div class="w-24 h-1.5 bg-darkGreen rounded-full mt-4"></div>
+        </div>
+
+        <div class="space-y-6 md:space-y-8">
+
+          <!-- 1. BUILDING CONSTRUCTION -->
+          <article class="accordion-item bg-[#0F036D] text-white hover:bg-[#1A0D99] transition-colors duration-300">
+            <button
+              type="button"
+              class="accordion-header w-full flex flex-col sm:flex-row items-stretch text-left"
+              aria-expanded="false"
+            >
+              <div class="sm:w-2/5 aspect-[4/3] overflow-hidden flex-shrink-0">
+                <img src="../assets/images/general/image1.jpg" alt="Building Construction" class="w-full h-full object-cover">
+              </div>
+              <div class="grow p-6 md:p-8 flex flex-col">
+                <h3 class="text-2xl font-bold uppercase tracking-wide mb-3">Building Construction</h3>
+                <p class="text-white/80 text-sm leading-relaxed">
+                  Residential construction, commercial buildings, structural works and quality workmanship that stand the test of time.
+                </p>
+                <div class="mt-auto flex justify-end pt-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="accordion-chevron w-8 h-8 text-white">
+                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.508a.75.75 0 0 1-1.08 0L5.23 8.27a.75.75 0 0 1 .02-1.06Z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+            </button>
+            <div class="accordion-body grid transition-all duration-300 [grid-template-rows:0fr]">
+              <div class="overflow-hidden">
+                <div class="border-t border-white/10 px-6 md:px-8 py-6 md:py-8">
+                  <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4">
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span><span class="text-white/85 text-sm">Foundations</span></li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span><span class="text-white/85 text-sm">Bricklaying</span></li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span><span class="text-white/85 text-sm">Roofing</span></li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span><span class="text-white/85 text-sm">Finishing</span></li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span><span class="text-white/85 text-sm">Concrete Works</span></li>
+                  </ul>
+
+                  <!-- SAMPLE PROJECT -->
+                  <div class="mt-8 md:mt-10 border-t border-white/15 pt-8">
+                    <div class="flex flex-col sm:flex-row gap-6 sm:gap-8">
+                      <div class="sm:w-2/5 lg:w-1/3 flex-shrink-0 aspect-[4/3] overflow-hidden rounded-md">
+                        <img src="../assets/images/projects/resident-house.jpg" alt="Resident House project" class="w-full h-full object-cover">
+                      </div>
+                      <div class="flex flex-col grow">
+                        <p class="text-green-400 uppercase text-xs font-bold tracking-widest mb-2">Sample Project</p>
+                        <h4 class="text-xl font-bold uppercase text-white mb-1">Resident House</h4>
+                        <p class="text-green-400/90 uppercase text-sm tracking-wide mb-3">Likoma Island</p>
+                        <p class="text-white/75 text-sm leading-relaxed mb-5">Residential construction from foundation to finishing, delivered on time and within budget.</p>
+                        <a href="project-details.html?project=resident-house" class="mt-auto bg-darkGreen hover:bg-[#024d16] text-white font-bold py-3 px-6 flex items-center justify-between w-full sm:w-auto gap-6 rounded-md transition duration-300">
+                          <span>View Project</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. RENOVATIONS & REMODELING -->
+          <article class="accordion-item bg-[#0F036D] text-white hover:bg-[#1A0D99] transition-colors duration-300">
+            <button
+              type="button"
+              class="accordion-header w-full flex flex-col sm:flex-row items-stretch text-left"
+              aria-expanded="false"
+            >
+              <div class="sm:w-2/5 aspect-[4/3] overflow-hidden flex-shrink-0">
+                <img src="../assets/images/general/image2.jpg" alt="Renovations and Remodeling" class="w-full h-full object-cover">
+              </div>
+              <div class="grow p-6 md:p-8 flex flex-col">
+                <h3 class="text-2xl font-bold uppercase tracking-wide mb-3">Renovations &amp; Remodeling</h3>
+                <p class="text-white/80 text-sm leading-relaxed">
+                  Home renovations, office remodeling, extensions and interior or exterior improvements that transform your space.
+                </p>
+                <div class="mt-auto flex justify-end pt-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="accordion-chevron w-8 h-8 text-white">
+                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.508a.75.75 0 0 1-1.08 0L5.23 8.27a.75.75 0 0 1 .02-1.06Z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+            </button>
+            <div class="accordion-body grid transition-all duration-300 [grid-template-rows:0fr]">
+              <div class="overflow-hidden">
+                <div class="border-t border-white/10 px-6 md:px-8 py-6 md:py-8">
+                  <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4">
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span><span class="text-white/85 text-sm">Painting</span></li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span><span class="text-white/85 text-sm">Ceiling Replacement</span></li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span><span class="text-white/85 text-sm">Tiling</span></li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span><span class="text-white/85 text-sm">Partitioning</span></li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span><span class="text-white/85 text-sm">Kitchen &amp; Bathroom Remodeling</span></li>
+                  </ul>
+
+                  <!-- SAMPLE PROJECT -->
+                  <div class="mt-8 md:mt-10 border-t border-white/15 pt-8">
+                    <div class="flex flex-col sm:flex-row gap-6 sm:gap-8">
+                      <div class="sm:w-2/5 lg:w-1/3 flex-shrink-0 aspect-[4/3] overflow-hidden rounded-md">
+                        <img src="../assets/images/projects/girls-hostels.jpg" alt="Girls Hostels project" class="w-full h-full object-cover">
+                      </div>
+                      <div class="flex flex-col grow">
+                        <p class="text-green-400 uppercase text-xs font-bold tracking-widest mb-2">Sample Project</p>
+                        <h4 class="text-xl font-bold uppercase text-white mb-1">Girls Hostels</h4>
+                        <p class="text-green-400/90 uppercase text-sm tracking-wide mb-3">Blantyre, Zingwangwa</p>
+                        <p class="text-white/75 text-sm leading-relaxed mb-5">Hostel remodeling and extension creating spacious, secure accommodation for students.</p>
+                        <a href="project-details.html?project=girls-hostels" class="mt-auto bg-darkGreen hover:bg-[#024d16] text-white font-bold py-3 px-6 flex items-center justify-between w-full sm:w-auto gap-6 rounded-md transition duration-300">
+                          <span>View Project</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. CIVIL WORKS -->
+          <article class="accordion-item bg-[#0F036D] text-white hover:bg-[#1A0D99] transition-colors duration-300">
+            <button
+              type="button"
+              class="accordion-header w-full flex flex-col sm:flex-row items-stretch text-left"
+              aria-expanded="false"
+            >
+              <div class="sm:w-2/5 aspect-[4/3] overflow-hidden flex-shrink-0">
+                <img src="../assets/images/general/image3.jpg" alt="Civil Works" class="w-full h-full object-cover">
+              </div>
+              <div class="grow p-6 md:p-8 flex flex-col">
+                <h3 class="text-2xl font-bold uppercase tracking-wide mb-3">Civil Works</h3>
+                <p class="text-white/80 text-sm leading-relaxed">
+                  Bridges, drainage systems, roads, culverts and earthworks executed with precision and durability.
+                </p>
+                <div class="mt-auto flex justify-end pt-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="accordion-chevron w-8 h-8 text-white">
+                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.508a.75.75 0 0 1-1.08 0L5.23 8.27a.75.75 0 0 1 .02-1.06Z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+            </button>
+            <div class="accordion-body grid transition-all duration-300 [grid-template-rows:0fr]">
+              <div class="overflow-hidden">
+                <div class="border-t border-white/10 px-6 md:px-8 py-6 md:py-8">
+                  <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4">
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span><span class="text-white/85 text-sm">Excavation</span></li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span><span class="text-white/85 text-sm">Retaining Walls</span></li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span><span class="text-white/85 text-sm">Concrete Structures</span></li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span><span class="text-white/85 text-sm">Site Preparation</span></li>
+                  </ul>
+
+                  <!-- SAMPLE PROJECT -->
+                  <div class="mt-8 md:mt-10 border-t border-white/15 pt-8">
+                    <div class="flex flex-col sm:flex-row gap-6 sm:gap-8">
+                      <div class="sm:w-2/5 lg:w-1/3 flex-shrink-0 aspect-[4/3] overflow-hidden rounded-md">
+                        <img src="../assets/images/projects/reinforced-bridge.jpg" alt="Reinforced Bridge project" class="w-full h-full object-cover">
+                      </div>
+                      <div class="flex flex-col grow">
+                        <p class="text-green-400 uppercase text-xs font-bold tracking-widest mb-2">Sample Project</p>
+                        <h4 class="text-xl font-bold uppercase text-white mb-1">Reinforced Bridge</h4>
+                        <p class="text-green-400/90 uppercase text-sm tracking-wide mb-3">Balaka, Chigwede</p>
+                        <p class="text-white/75 text-sm leading-relaxed mb-5">Reinforced concrete bridge built through site preparation, formwork, reinforcement and structural concreting.</p>
+                        <a href="project-details.html?project=reinforced-bridge" class="mt-auto bg-darkGreen hover:bg-[#024d16] text-white font-bold py-3 px-6 flex items-center justify-between w-full sm:w-auto gap-6 rounded-md transition duration-300">
+                          <span>View Project</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. ELECTRICAL & PLUMBING -->
+          <article class="accordion-item bg-[#0F036D] text-white hover:bg-[#1A0D99] transition-colors duration-300">
+            <button
+              type="button"
+              class="accordion-header w-full flex flex-col sm:flex-row items-stretch text-left"
+              aria-expanded="false"
+            >
+              <div class="sm:w-2/5 aspect-[4/3] overflow-hidden flex-shrink-0">
+                <img src="../assets/images/general/image1.jpg" alt="Electrical and Plumbing" class="w-full h-full object-cover">
+              </div>
+              <div class="grow p-6 md:p-8 flex flex-col">
+                <h3 class="text-2xl font-bold uppercase tracking-wide mb-3">Electrical &amp; Plumbing</h3>
+                <p class="text-white/80 text-sm leading-relaxed">
+                  Electrical installations, water systems, maintenance and plumbing for both industrial and residential projects.
+                </p>
+                <div class="mt-auto flex justify-end pt-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="accordion-chevron w-8 h-8 text-white">
+                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 11.168l3.71-3.938a.75.75 0 1 1 1.08 1.04l-4.25 4.508a.75.75 0 0 1-1.08 0L5.23 8.27a.75.75 0 0 1 .02-1.06Z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+            </button>
+            <div class="accordion-body grid transition-all duration-300 [grid-template-rows:0fr]">
+              <div class="overflow-hidden">
+                <div class="border-t border-white/10 px-6 md:px-8 py-6 md:py-8">
+                  <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4">
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span><span class="text-white/85 text-sm">Wiring</span></li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span><span class="text-white/85 text-sm">Lighting</span></li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span><span class="text-white/85 text-sm">Piping</span></li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span><span class="text-white/85 text-sm">Water Tanks</span></li>
+                    <li class="flex items-center gap-3"><span class="w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span><span class="text-white/85 text-sm">Pump Installation</span></li>
+                  </ul>
+
+                  <!-- SAMPLE PROJECT -->
+                  <div class="mt-8 md:mt-10 border-t border-white/15 pt-8">
+                    <div class="flex flex-col sm:flex-row gap-6 sm:gap-8">
+                      <div class="sm:w-2/5 lg:w-1/3 flex-shrink-0 aspect-[4/3] overflow-hidden rounded-md">
+                        <img src="../assets/images/projects/illovo-factory-warehouse.jpg" alt="Illovo Factory Warehouse project" class="w-full h-full object-cover">
+                      </div>
+                      <div class="flex flex-col grow">
+                        <p class="text-green-400 uppercase text-xs font-bold tracking-widest mb-2">Sample Project</p>
+                        <h4 class="text-xl font-bold uppercase text-white mb-1">Illovo Factory Warehouse</h4>
+                        <p class="text-green-400/90 uppercase text-sm tracking-wide mb-3">Chikwawa, Ntchalo</p>
+                        <p class="text-white/75 text-sm leading-relaxed mb-5">Industrial warehouse featuring complete electrical installations, water systems and pump installations.</p>
+                        <a href="project-details.html?project=illovo-factory-warehouse" class="mt-auto bg-darkGreen hover:bg-[#024d16] text-white font-bold py-3 px-6 flex items-center justify-between w-full sm:w-auto gap-6 rounded-md transition duration-300">
+                          <span>View Project</span>
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                            <path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECT -->
+    <section class="container mx-auto px-6 md:px-8 py-16 md:py-24">
+      <div class="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+        <div class="overflow-hidden shadow-md">
+          <img src="../assets/images/hero/hero.jpg" alt="Reinforced Bridge project" class="w-full h-full object-cover aspect-[16/10] md:aspect-auto md:h-[440px]">
+        </div>
+        <div>
+          <p class="text-darkGreen text-sm font-bold uppercase tracking-widest mb-3">Featured Project</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-darkBlue tracking-tight mb-2">REINFORCED BRIDGE</h2>
+          <p class="text-darkBlue uppercase text-sm font-semibold tracking-wide mb-5">Balaka, Chigwede</p>
+          <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-8">
+            WOTAZS Group Construction delivered a reinforced concrete bridge at Balaka, Chigwede,
+            handling everything from site preparation and excavation to formwork, reinforcement and
+            structural concreting. The project showcases our capability in civil works, our commitment
+            to quality workmanship and our ability to deliver critical infrastructure safely and on schedule.
+          </p>
+          <button type="button" class="bg-darkGreen hover:bg-[#024d16] text-white font-bold py-3 px-8 flex items-center justify-between w-full sm:w-auto gap-8 rounded-md transition duration-300">
+            <span>View Project</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+              <path fill-rule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- Footer -->
-  <footer id="footer"></footer>
+  <div id="footer-container"></div>
 
   <!-- JS -->
-  <script src="../assets/js/main.js"></script>
-  <script src="../assets/js/navbar.js"></script>
-  <script src="../assets/js/swiper-init.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/navbar.js"></script>
+  <script src="/assets/js/footer.js"></script>
+  <script src="/assets/js/services.js"></script>
 </body>
 </html>

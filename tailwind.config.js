@@ -4,7 +4,8 @@ module.exports = {
     "./src/**/*.{html,js}",
     "./pages/**/*.{html,js}",
     "./components/**/*.{html,js}",
-    "./**/*.html" 
+    "./assets/**/*.{html,js}",
+    "./**/*.html"
   ],
   safelist: [
     'bg-[url(\'../assets/images/hero/hero.jpg\')]', 

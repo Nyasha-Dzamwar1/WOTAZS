@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
+.project-card {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+}
+
+.project-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card.visible:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
 .nav-link{
     position: relative;
     transition: font-weight 0.2s ease;
@@ -29,4 +49,53 @@
 
 .nav-link.active::after {
     width: 100%;
+}
+
+.accordion-item.open .accordion-body {
+    grid-template-rows: 1fr;
+}
+
+.accordion-item.open .accordion-chevron {
+    transform: rotate(180deg);
+}
+
+/* Home hero: full-width gradient overlay (full coverage below 768px) */
+.hero-overlay {
+    background: linear-gradient(90deg, rgba(13, 10, 92, 0.85) 0%, rgba(13, 10, 92, 0.3) 100%);
+}
+
+@media (min-width: 768px) {
+    .hero-overlay {
+        background: linear-gradient(90deg, rgba(13, 10, 92, 0.85) 0%, rgba(13, 10, 92, 0.3) 60%, transparent 100%);
+    }
+}
+
+/* Home hero: entrance animation (fade-in + translateY) */
+@keyframes heroIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-anim {
+    opacity: 0;
+    animation: heroIn 400ms ease-out forwards;
+}
+
+.hero-anim-1 {
+    animation-delay: 0ms;
+}
+
+.hero-anim-2 {
+    animation-delay: 100ms;
+}
+
+.hero-anim-3 {
+    animation-delay: 200ms;
 }
