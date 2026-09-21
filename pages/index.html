@@ -19,7 +19,16 @@
 
 
   <!--HERO SECTION-->
-  <section class="relative bg-cover bg-[url('../assets/images/hero/hero.jpg')] h-[550px] flex items-center overflow-hidden">
+  <section class="relative h-[550px] flex items-center overflow-hidden">
+
+    <!-- Hero slideshow layers (crossfade driven by hero-slider.js) -->
+    <div id="hero-slides" class="absolute inset-0">
+      <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-100 transition-opacity duration-1000 ease-in-out bg-[url('../assets/images/hero/hero.jpg')]"></div>
+      <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 ease-in-out bg-[url('../assets/images/hero/hero_about.jpg')]"></div>
+      <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 ease-in-out bg-[url('../assets/images/general/image1.jpg')]"></div>
+      <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 ease-in-out bg-[url('../assets/images/general/image2.jpg')]"></div>
+      <div class="hero-slide absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000 ease-in-out bg-[url('../assets/images/general/image3.jpg')]"></div>
+    </div>
 
     <div class="hero-overlay absolute inset-0"></div>
 

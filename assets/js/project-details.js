@@ -1,4 +1,4 @@
-// project-details.js
+﻿// project-details.js
 // Renders the dynamic project detail page shared by all projects.
 // Any project in the Projects list can open this template via:
 //   project-details.html?project=<slug>
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function renderParagraphs(paragraphs) {
     return paragraphs
-      .map(p => `<p class="text-[15px] md:text-base leading-[1.6] text-white">${p}</p>`)
+      .map(p => '<p class="text-[15px] md:text-base leading-[1.6] text-white">' + p + '</p>')
       .join('');
   }
 
@@ -132,47 +132,45 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function renderSection(section, altPrefix) {
     const paragraphsHtml = renderParagraphs(section.paragraphs);
+    const imgHtml = renderImage(section.images[0], altPrefix, 'w-full h-full object-cover');
 
+    /* Row B: image on the left (bleeds past the navy panel's bottom edge
+       onto white), text block to its right, roughly vertically centered. */
     if (section.layout === 'image-left') {
       return (
-        '<div class="flex flex-col md:flex-row md:items-center mt-6 md:mt-7">' +
-        '<div class="w-full md:w-[38%]">' +
-        renderImage(section.images[0], altPrefix, 'w-full h-[340px] md:h-[350px]') +
-        '</div>' +
-        '<div class="w-full md:w-[62%] px-6 md:pl-12 md:pr-16 pt-6 md:pt-0">' +
-        '<div class="space-y-7 md:max-w-[42rem]">' + paragraphsHtml + '</div>' +
+        '<div class="flex flex-col md:flex-row md:items-center mt-8 md:mt-[72px]">' +
+        '<div class="overflow-hidden aspect-[532/446] bg-[#D9D9D9] md:w-[36vw] md:-ml-[32px] md:-mb-[7vw] md:mr-[8vw]">' + imgHtml + '</div>' +
+        '<div class="md:w-[40%] md:py-[64px]">' +
+        '<div class="space-y-5 md:space-y-6">' + paragraphsHtml + '</div>' +
         '</div>' +
         '</div>'
       );
     }
 
+    /* Row A: text block left (slight top offset), image right that bleeds
+       past the navy panel's right edge onto the white margin. */
     return (
-      '<div class="flex flex-col md:flex-row md:items-center">' +
-      '<div class="md:w-1/2 px-6 md:pl-10 md:pr-8 pt-10 md:pt-14">' +
-      '<div class="space-y-7">' + paragraphsHtml + '</div>' +
+      '<div class="flex flex-col md:flex-row md:items-start">' +
+      '<div class="md:w-[45%] md:pt-[64px] md:pr-8">' +
+      '<div class="space-y-5 md:space-y-6">' + paragraphsHtml + '</div>' +
       '</div>' +
-      '<div class="md:w-1/2 mt-6 md:mt-0">' +
-      renderImage(section.images[0], altPrefix, 'w-full h-[280px] md:h-[300px]') +
-      '</div>' +
+      '<div class="overflow-hidden aspect-[756/522] bg-[#D9D9D9] mt-6 md:mt-[56px] md:w-[50vw] md:ml-auto md:-mr-[12vw]">' + imgHtml + '</div>' +
       '</div>'
     );
   }
 
   const project = getProject();
   const titleHtml =
-    '<div class="bg-white px-6 md:px-10 py-8">' +
-    '<div class="flex items-center gap-4 md:gap-6">' +
-    '<a href="projects.html" aria-label="Back to Projects"' +
-    ' class="text-darkBlue hover:text-darkGreen transition-colors duration-200 flex-shrink-0">' +
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8">' +
+    '<div class="bg-white px-6 md:px-10 pt-8 md:pt-14 pb-6 md:pb-10 flex items-center gap-4 md:gap-6">' +
+    '<a href="projects.html" aria-label="Back to Projects" class="text-darkGreen hover:text-[#024d16] transition-colors duration-200 flex-shrink-0 w-[60px] h-[60px] md:w-[81px] md:h-[81px]">' +
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="w-full h-full">' +
     '<path fill-rule="evenodd" d="M7.28 7.72a.75.75 0 0 1 0 1.06L5.81 10.25H20a.75.75 0 1 1 0 1.5H5.81l1.47 1.47a.75.75 0 1 1-1.06 1.06l-2.75-2.75a.75.75 0 0 1 0-1.06l2.75-2.75a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />' +
     '</svg>' +
     '</a>' +
-    '<h1 class="font-bold text-[28px] leading-tight">' +
-    '<span class="text-darkBlue">' + project.title + ',</span> ' +
+    '<h1 class="font-bold tracking-tight leading-tight text-[25px] md:text-[45px]">' +
+    '<span class="text-darkBlue">' + project.title + ',\u00A0</span>' +
     '<span class="text-darkGreen">' + project.location + '</span>' +
     '</h1>' +
-    '</div>' +
     '</div>';
 
   let sectionsHtml = '';
@@ -181,9 +179,15 @@ document.addEventListener('DOMContentLoaded', function () {
     sectionsHtml += renderSection(project.sections[i], project.title + ' project image ' + (i + 1));
   }
 
+  /* Navy panel spans most of the width and stops short on the right.
+     The wrapper leaves white breathing room at the bottom so the Row B
+     image bleeds onto white rather than the footer. */
   const contentHtml =
-    '<section class="bg-darkBlue text-white pb-10 md:pb-14">' + sectionsHtml + '</section>';
+    '<section class="bg-darkBlue text-white w-full md:w-[88%] px-6 md:px-8 pt-8 md:pt-9 md:pb-2">' + sectionsHtml + '</section>';
 
-  main.innerHTML = titleHtml + contentHtml;
+  main.innerHTML =
+    '<div class="bg-white pb-[10vw] md:pb-[15vw]">' +
+    titleHtml + contentHtml +
+    '</div>';
   document.title = 'WOTAZS \u2022 ' + project.title;
 });
