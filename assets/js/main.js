@@ -1,26 +1,35 @@
 // main.js
-// Fade-in animation for .project-card elements when they enter the viewport.
+// Reveal animations: fade .project-card and [data-reveal] elements in when
+// they enter the viewport.
 document.addEventListener('DOMContentLoaded', function () {
-  const cards = document.querySelectorAll('.project-card');
+  const targets = document.querySelectorAll('.project-card, [data-reveal]');
 
-  if (!cards.length) return;
+  if (!targets.length) return;
 
   if (!('IntersectionObserver' in window)) {
-    cards.forEach(card => card.classList.add('visible'));
+    targets.forEach((el) => el.classList.add('visible'));
     return;
   }
 
+  targets.forEach((el) => {
+    const delay = parseInt(el.dataset.revealDelay || '0', 10);
+    if (delay) el.style.transitionDelay = delay + 'ms';
+  });
+
   const observer = new IntersectionObserver(
     (entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
+          const el = entry.target;
+          el.classList.add('visible');
+          const delay = parseInt(el.dataset.revealDelay || '0', 10);
+          if (delay) setTimeout(() => { el.style.transitionDelay = ''; }, delay + 700);
+          observer.unobserve(el);
         }
       });
     },
     { threshold: 0.15 }
   );
 
-  cards.forEach(card => observer.observe(card));
+  targets.forEach((el) => observer.observe(el));
 });
