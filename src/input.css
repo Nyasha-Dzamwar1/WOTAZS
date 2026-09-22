@@ -26,12 +26,90 @@ html {
 .reveal {
     opacity: 0;
     transform: translateY(24px);
-    transition: opacity 0.6s ease, transform 0.6s ease, background-color 0.3s ease;
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out, background-color 0.3s ease;
 }
 
 .reveal.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Once a reveal finishes, switch hover transitions to a snappy hover-speed */
+.reveal-done {
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Image gently settles from a slight zoom on reveal */
+.reveal .reveal-zoom {
+    transform: scale(1.05);
+    transition: transform 1.2s ease-out 0.2s;
+}
+
+.reveal.visible .reveal-zoom {
+    transform: scale(1);
+}
+
+/* How-We-Work: expanding connector line */
+.timeline-wrap .timeline-bar {
+    width: 0;
+    transition: width 1.2s ease-out 0.3s;
+}
+
+.timeline-wrap.visible .timeline-bar {
+    width: 100%;
+}
+
+/* How-We-Work: step icon gently rotates in, number pops in */
+.step-icon {
+    transition: transform 0.6s ease-out;
+}
+
+.reveal .step-icon {
+    transform: rotate(-5deg);
+}
+
+.reveal.visible .step-icon {
+    transform: rotate(0deg);
+}
+
+.step-circle {
+    transition: transform 0.4s ease-out, box-shadow 0.3s ease;
+}
+
+.reveal .step-circle {
+    transform: scale(0.85);
+}
+
+.reveal.visible .step-circle {
+    transform: scale(1);
+}
+
+.reveal.visible .step-circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 20px -8px rgb(3 109 33 / 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal-zoom,
+    .step-circle,
+    .step-icon,
+    .timeline-bar,
+    .hero-anim,
+    .project-card {
+        transition: none !important;
+        animation: none !important;
+    }
+
+    .reveal,
+    .project-card {
+        opacity: 1;
+        transform: none;
+    }
+
+    .timeline-bar {
+        width: 100%;
+    }
 }
 
 .nav-link{

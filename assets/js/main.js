@@ -23,7 +23,10 @@ document.addEventListener('DOMContentLoaded', function () {
           const el = entry.target;
           el.classList.add('visible');
           const delay = parseInt(el.dataset.revealDelay || '0', 10);
-          if (delay) setTimeout(() => { el.style.transitionDelay = ''; }, delay + 700);
+          setTimeout(() => {
+            el.style.transitionDelay = '';
+            el.classList.add('reveal-done');
+          }, delay + 900);
           observer.unobserve(el);
         }
       });
