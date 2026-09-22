@@ -7,9 +7,6 @@
 
   <!-- Tailwind -->
   <link href="../dist/output.css" rel="stylesheet">
-
-  <!-- Swiper.js -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body class="bg-gray-50">
@@ -17,24 +14,104 @@
   <!-- Navbar -->
   <div id="navbar-container"></div>
 
+  <main>
 
-  <!-- HERO SECTION WITH SLIDER -->
-  <section class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="assets/images/hero/hero1.jpg" class="w-full h-screen object-cover"></div>
-      <div class="swiper-slide"><img src="assets/images/hero/hero2.jpg" class="w-full h-screen object-cover"></div>
-    </div>
-    <div class="swiper-pagination"></div>
-  </section>
+    <!-- HERO BANNER (identical treatment to Services/Projects) -->
+    <section class="relative min-h-[400px] md:h-[380px] flex items-center overflow-hidden">
+      <img
+        src="/assets/images/hero/hero.jpg"
+        alt="Industrial stairwell construction site"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-black/60"></div>
 
+      <div class="relative z-10 container mx-auto px-6 md:px-8 py-16">
+        <p class="text-white/85 text-sm md:text-base tracking-widest mb-3">BUILDING EXCELLENCE WITH INTEGRITY</p>
+        <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-8">CONTACT US</h1>
+        <ul class="text-white text-sm md:text-base space-y-2">
+          <li class="flex items-center gap-3"><span class="block w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span>Consultations &amp; Quotations</li>
+          <li class="flex items-center gap-3"><span class="block w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span>Estimates &amp; Partnerships</li>
+          <li class="flex items-center gap-3"><span class="block w-2 h-2 bg-darkGreen rounded-full flex-shrink-0"></span>Prompt Response to Every Enquiry</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- THREE-COLUMN CONTACT INFO ROW -->
+    <section class="bg-white">
+      <div class="container mx-auto px-6 md:px-8 py-[60px]">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 items-stretch">
+
+          <!-- VISIT US -->
+          <div class="flex flex-col items-center text-center">
+            <div class="w-16 h-16 flex items-center justify-center rounded-full border-2 border-gray-900 mb-5">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-8 h-8 text-gray-900">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">VISIT US</h3>
+            <p class="text-gray-500 mb-4">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.
+            </p>
+            <p class="text-base sm:text-lg font-bold text-gray-900 leading-snug">
+              Dossani House,<br>Blantyre, Malawi
+            </p>
+          </div>
+
+          <!-- CALL US -->
+          <div class="flex flex-col items-center text-center">
+            <div class="w-16 h-16 flex items-center justify-center rounded-full border-2 border-gray-900 mb-5">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-8 h-8 text-gray-900">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">CALL US</h3>
+            <p class="text-gray-500 mb-4">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.
+            </p>
+            <a href="tel:+265999418157" class="text-base sm:text-lg font-bold text-gray-900 hover:text-darkGreen transition-colors">
+              +265 999 418 157
+            </a>
+          </div>
+
+          <!-- MESSAGE US -->
+          <div class="flex flex-col items-center text-center">
+            <div class="w-16 h-16 flex items-center justify-center rounded-full border-2 border-gray-900 mb-5">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-8 h-8 text-gray-900">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125V21" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">MESSAGE US</h3>
+            <p class="text-gray-500 mb-4">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor.
+            </p>
+            <a href="mailto:wotazs.group@gmail.com" class="text-base sm:text-lg font-bold text-gray-900 break-all hover:text-darkGreen transition-colors">
+              wotazs.group@gmail.com
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE GOOGLE MAP -->
+    <section class="bg-white">
+      <div class="container mx-auto px-6 md:px-8 pb-12">
+        <div id="contact-map" class="w-full h-[450px] md:h-[480px] rounded-lg overflow-hidden shadow-lg"></div>
+        <noscript>
+          <p class="text-red-500 text-center text-sm mt-3">JavaScript is required to display the map. Please enable it and reload.</p>
+        </noscript>
+      </div>
+    </section>
+
+  </main>
 
   <!-- Footer -->
-  <footer id="footer"></footer>
+  <div id="footer-container"></div>
 
   <!-- JS -->
-  <script src="/assets/js/main.js"></script>
-  <script src="/assets/js/navbar.js"></script>
-  <script src="/assets/js/swiper-init.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/navbar.js"></script>
+  <script src="../assets/js/footer.js"></script>
+  <script src="../assets/js/contact-map.js"></script>
 </body>
 </html>
