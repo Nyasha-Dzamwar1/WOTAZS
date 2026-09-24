@@ -96,7 +96,8 @@ html {
     .step-icon,
     .timeline-bar,
     .hero-anim,
-    .project-card {
+    .project-card,
+    body {
         transition: none !important;
         animation: none !important;
     }
@@ -143,6 +144,11 @@ html {
 
 .accordion-item {
     position: relative;
+    scroll-margin-top: 9rem;
+}
+
+#what-we-do {
+    scroll-margin-top: 9rem;
 }
 
 .accordion-chevron {
@@ -202,4 +208,21 @@ html {
 
 .hero-anim-3 {
     animation-delay: 200ms;
+}
+
+/* ---- Page load fade-in ---- */
+@keyframes page-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+body {
+    animation: page-fade-in 0.35s ease-out both;
 }

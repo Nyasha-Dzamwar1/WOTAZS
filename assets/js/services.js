@@ -26,4 +26,18 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+  // Open the card matching the URL hash (e.g. hero/footer links to #civil-works)
+  function openFromHash() {
+    if (!location.hash) return;
+    const target = document.querySelector(location.hash);
+    if (!target || !target.classList.contains('accordion-item')) return;
+    items.forEach(closeItem);
+    target.classList.add('open');
+    const header = target.querySelector('.accordion-header');
+    if (header) header.setAttribute('aria-expanded', 'true');
+  }
+
+  openFromHash();
+  window.addEventListener('hashchange', openFromHash);
 });
