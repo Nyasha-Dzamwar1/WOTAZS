@@ -1,4 +1,4 @@
-﻿// project-details.js
+// project-details.js
 // Renders the dynamic project detail page shared by all projects.
 // Any project in the Projects list can open this template via:
 //   project-details.html?project=<slug>
@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const main = document.getElementById('project-detail');
   if (!main) return;
 
-  const IMG_PATH = '../assets/images/projects/';
-  const FALLBACK_IMAGE = '../assets/images/general/image1.jpg';
+  const IMG_PATH = 'assets/images/projects/';
+  const FALLBACK_IMAGE = 'assets/images/general/image1.jpg';
 
   const PROJECTS = {
     'resident-house': {

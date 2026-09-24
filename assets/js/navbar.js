@@ -12,9 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   const CANDIDATE_PATHS = [
-    '../components/navbar.html', // pages live in /pages, component in /components
-    'components/navbar.html',    // fallback for root-level pages
-    '../components/navbar.html'  // last resort
+    'components/navbar.html', // site root serves the component
+    'components/navbar.html'  // last resort
   ];
 
   function tryLoad(idx) {

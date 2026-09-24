@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const grid = document.getElementById('projects-grid');
   if (!grid) return;
 
-  const PLACEHOLDER_IMAGE = '../assets/images/general/image1.jpg';
+  const PLACEHOLDER_IMAGE = 'assets/images/general/image1.jpg';
 
   const projects = [
     {
@@ -15,42 +15,42 @@ document.addEventListener('DOMContentLoaded', function () {
       title: 'Resident House',
       location: 'Likoma Island',
       description: 'Modern residential construction delivered with quality workmanship, on time and within budget.',
-      image: '../assets/images/projects/resident-house.jpg'
+      image: 'assets/images/projects/resident-house.jpg'
     },
     {
       slug: 'girls-hostels',
       title: 'Girls Hostels',
       location: 'Blantyre, Zingwangwa',
       description: 'Spacious, secure hostel development built to comfortably accommodate students.',
-      image: '../assets/images/projects/girls-hostels.jpg'
+      image: 'assets/images/projects/girls-hostels.jpg'
     },
     {
       slug: 'reinforced-bridge',
       title: 'Reinforced Bridge',
       location: 'Balaka, Chigwede',
       description: 'Structural concrete bridge engineered for strength, safety and long-term durability.',
-      image: '../assets/images/projects/reinforced-bridge.jpg'
+      image: 'assets/images/projects/reinforced-bridge.jpg'
     },
     {
       slug: 'illovo-factory-warehouse',
       title: 'Illovo Factory Warehouse',
       location: 'Chikwawa, Ntchalo',
       description: 'Large-scale industrial warehouse facility featuring robust steel and concrete construction.',
-      image: '../assets/images/projects/illovo-factory-warehouse.jpg'
+      image: 'assets/images/projects/illovo-factory-warehouse.jpg'
     },
     {
       slug: 'reinforced-bridge',
       title: 'Reinforced Bridge',
       location: 'Balaka, Chigwede',
       description: 'Engineered bridge construction focused on precision, load capacity and lasting quality.',
-      image: '../assets/images/projects/reinforced-bridge.jpg'
+      image: 'assets/images/projects/reinforced-bridge.jpg'
     },
     {
       slug: 'illovo-factory-warehouse',
       title: 'Illovo Factory Warehouse',
       location: 'Chikwawa, Ntchalo',
       description: 'Industrial warehouse construction designed for heavy use and efficient logistics.',
-      image: '../assets/images/projects/illovo-factory-warehouse.jpg'
+      image: 'assets/images/projects/illovo-factory-warehouse.jpg'
     }
   ];
 
