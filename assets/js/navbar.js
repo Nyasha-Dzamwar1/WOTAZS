@@ -1,6 +1,10 @@
 // navbar.js - clean rewrite: loads components/navbar.html, wires the
 // mobile hamburger toggle, and highlights the current-page link.
 document.addEventListener('DOMContentLoaded', function() {
+  function signalNavbarReady() {
+    window.dispatchEvent(new Event('navbar-ready'));
+  }
+
   // Page hosts the navbar inside a container; accept either spelling that
   // exists across the pages to stay robust.
   const navbarContainer = document.getElementById('navbar-container') ||
@@ -8,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (!navbarContainer) {
     console.error('navbar container element not found!');
+    signalNavbarReady();
     return;
   }
 
@@ -23,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <nav class="w-full flex justify-between items-center py-4 px-8 bg-darkBlue text-white">
           <a href="index.html" class="text-xl font-bold">WOTAZS GROUP</a>
         </nav>`;
+      signalNavbarReady();
       return;
     }
 
@@ -35,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         navbarContainer.innerHTML = html;
         setupMobileMenu();
         highlightActiveLink();
+        signalNavbarReady();
       })
       .catch(err => {
         console.warn('Navbar path ' + CANDIDATE_PATHS[idx] + ' failed:', err.message);

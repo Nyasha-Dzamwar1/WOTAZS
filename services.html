@@ -9,7 +9,17 @@
   <link href="dist/output.css" rel="stylesheet" />
 </head>
 
-<body class="bg-gray-50">
+<body class="bg-gray-50 page-loading">
+  <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="Loading page" aria-busy="true">
+    <div class="page-loader__content">
+      <svg class="page-loader__icon" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true">
+        <circle cx="32" cy="32" r="25" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="5"></circle>
+        <path d="M32 7a25 25 0 0 1 25 25" fill="none" stroke="#4ade80" stroke-width="5" stroke-linecap="round"></path>
+      </svg>
+      <p class="page-loader__brand">WOTAZS GROUP</p>
+      <p class="page-loader__text">Loading your experience</p>
+    </div>
+  </div>
 
   <!-- Navbar -->
   <div id="navbar-container"></div>

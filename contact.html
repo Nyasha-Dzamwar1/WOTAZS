@@ -9,7 +9,17 @@
   <link href="dist/output.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-50">
+<body class="bg-gray-50 page-loading">
+  <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="Loading page" aria-busy="true">
+    <div class="page-loader__content">
+      <svg class="page-loader__icon" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true">
+        <circle cx="32" cy="32" r="25" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="5"></circle>
+        <path d="M32 7a25 25 0 0 1 25 25" fill="none" stroke="#4ade80" stroke-width="5" stroke-linecap="round"></path>
+      </svg>
+      <p class="page-loader__brand">WOTAZS GROUP</p>
+      <p class="page-loader__text">Loading your experience</p>
+    </div>
+  </div>
 
   <!-- Navbar -->
   <div id="navbar-container"></div>
@@ -93,6 +103,134 @@
       </div>
     </section>
 
+    <section id="send-message" class="bg-gray-50 py-20 md:py-28">
+      <div class="container mx-auto px-6 md:px-8">
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+          <div class="lg:col-span-4 lg:sticky lg:top-32">
+            <p class="text-darkGreen text-sm font-bold uppercase tracking-widest mb-3">Send Us a Message</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-darkBlue tracking-tight leading-tight">Tell us about your project.</h2>
+            <p class="text-gray-600 text-base leading-relaxed mt-6 max-w-md">
+              Share a few details and our team will get back to you with the next steps.
+            </p>
+            <div class="w-24 h-1.5 bg-darkGreen rounded-full mt-8"></div>
+            <div class="mt-10 flex items-start gap-4">
+              <span class="w-11 h-11 rounded-full bg-darkGreen/10 text-darkGreen flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                  <path d="M12 6v6l4 2"></path>
+                  <circle cx="12" cy="12" r="9"></circle>
+                </svg>
+              </span>
+              <div>
+                <p class="font-semibold text-darkBlue">Prompt response</p>
+                <p class="text-sm text-gray-600 leading-relaxed mt-1">We aim to reply within one business day.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-8 bg-white rounded-2xl border border-gray-200/80 shadow-[0_20px_50px_-30px_rgba(15,3,109,0.35)] p-6 sm:p-8 lg:p-10">
+            <div class="mb-8">
+              <h3 class="text-2xl font-bold text-darkBlue">Project enquiry</h3>
+              <p class="text-sm text-gray-500 mt-2">Fields marked with an asterisk are required.</p>
+            </div>
+
+            <form
+              id="contact-form"
+              action="mailto:wotazs.group@gmail.com"
+              method="post"
+              enctype="text/plain"
+              class="space-y-6"
+            >
+              <div class="grid sm:grid-cols-2 gap-6">
+                <div>
+                  <label for="contact-name" class="block text-sm font-semibold text-gray-800">Full name <span class="text-darkGreen">*</span></label>
+                  <input
+                    id="contact-name"
+                    name="name"
+                    type="text"
+                    autocomplete="name"
+                    required
+                    placeholder="Your full name"
+                    class="mt-2 w-full h-12 rounded-lg border border-gray-300 bg-white px-4 text-gray-900 placeholder-gray-400 outline-none transition focus:border-darkGreen focus:ring-2 focus:ring-darkGreen/20"
+                  >
+                </div>
+                <div>
+                  <label for="contact-email" class="block text-sm font-semibold text-gray-800">Email address <span class="text-darkGreen">*</span></label>
+                  <input
+                    id="contact-email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                    placeholder="you@example.com"
+                    class="mt-2 w-full h-12 rounded-lg border border-gray-300 bg-white px-4 text-gray-900 placeholder-gray-400 outline-none transition focus:border-darkGreen focus:ring-2 focus:ring-darkGreen/20"
+                  >
+                </div>
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-6">
+                <div>
+                  <label for="contact-phone" class="block text-sm font-semibold text-gray-800">Phone number</label>
+                  <input
+                    id="contact-phone"
+                    name="phone"
+                    type="tel"
+                    autocomplete="tel"
+                    placeholder="+265 000 000 000"
+                    class="mt-2 w-full h-12 rounded-lg border border-gray-300 bg-white px-4 text-gray-900 placeholder-gray-400 outline-none transition focus:border-darkGreen focus:ring-2 focus:ring-darkGreen/20"
+                  >
+                </div>
+                <div>
+                  <label for="contact-service" class="block text-sm font-semibold text-gray-800">Service needed <span class="text-darkGreen">*</span></label>
+                  <select
+                    id="contact-service"
+                    name="service"
+                    required
+                    class="mt-2 w-full h-12 rounded-lg border border-gray-300 bg-white px-4 text-gray-900 outline-none transition focus:border-darkGreen focus:ring-2 focus:ring-darkGreen/20"
+                  >
+                    <option value="" disabled selected>Select a service</option>
+                    <option>General enquiry</option>
+                    <option>Building construction</option>
+                    <option>Renovation and remodeling</option>
+                    <option>Civil works</option>
+                    <option>Electrical and plumbing</option>
+                    <option>Project management</option>
+                    <option>Quantity surveying</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="contact-message" class="block text-sm font-semibold text-gray-800">Your message <span class="text-darkGreen">*</span></label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  rows="6"
+                  minlength="10"
+                  required
+                  placeholder="Tell us what you would like to build, repair, or discuss."
+                  class="mt-2 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-gray-900 placeholder-gray-400 outline-none transition focus:border-darkGreen focus:ring-2 focus:ring-darkGreen/20 resize-y"
+                ></textarea>
+              </div>
+
+              <div class="flex flex-col sm:flex-row sm:items-center gap-4 pt-2">
+                <button
+                  type="submit"
+                  class="inline-flex items-center justify-center gap-3 bg-darkGreen hover:bg-[#024d16] text-white font-semibold py-3.5 px-7 rounded-lg shadow-sm transition duration-300 hover:-translate-y-0.5"
+                >
+                  <span>Send message</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                    <path d="m22 2-7 20-4-9-9-4 20-7Z"></path>
+                    <path d="M22 2 11 13"></path>
+                  </svg>
+                </button>
+                <p id="contact-form-status" class="text-sm text-gray-500 leading-relaxed" aria-live="polite">Submitting opens your email app.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- LIVE GOOGLE MAP -->
     <section class="bg-white">
       <div class="container mx-auto px-6 md:px-8 pb-12">
@@ -110,12 +248,13 @@
 
   <!-- WhatsApp -->
   <a
+    id="whatsapp-button"
     href="https://wa.me/265999418157"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Chat with us on WhatsApp"
     title="Chat with us on WhatsApp"
-    class="fixed bottom-6 right-6 z-50 w-14 h-14 flex items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg hover:scale-110 transition-transform duration-300"
+    class="floating-control whatsapp-button w-14 h-14 flex items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg hover:scale-110 transition-transform duration-300"
   >
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
